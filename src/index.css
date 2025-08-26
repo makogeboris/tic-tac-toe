@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@theme {
+  /* Font family */
+  --font-sans: "Outfit", sans-serif;
+
+  /* Colors */
+  --color-dark-navy: hsl(202, 32%, 15%);
+  --color-semi-dark-navy: hsl(199, 35%, 19%);
+  --color-silver: hsl(198, 23%, 72%);
+  --color-silver-light: hsl(197, 33%, 89%);
+  --color-light-blue-500: hsl(178, 60%, 48%);
+  --color-light-blue-200: hsl(178, 75%, 65%);
+  --color-light-yellow-500: hsl(39, 88%, 58%);
+  --color-light-yellow-100: hsl(39, 100%, 69%);
+}
