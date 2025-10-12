@@ -1,6 +1,9 @@
 @import "tailwindcss";
 
 @theme {
+  /* Breakpoints */
+  --breakpoint-xs: 28.125rem;
+
   /* Font family */
   --font-sans: "Outfit", sans-serif;
 
@@ -13,4 +16,8 @@
   --color-light-blue-200: hsl(178, 75%, 65%);
   --color-light-yellow-500: hsl(39, 88%, 58%);
   --color-light-yellow-100: hsl(39, 100%, 69%);
+
+  --shadow-start: inset 0px -8px 0px #10212a;
+  --shadow-y: inset 0px -8px 0px #cc8b13;
+  --shadow-b: inset 0px -8px 0px #118c87;
 }

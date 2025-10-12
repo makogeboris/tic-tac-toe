@@ -1,8 +1,10 @@
+import NewGame from "./components/NewGame";
+
 function App() {
   return (
-    <div>
-      <h1 className="text-base">Tic Tac Toe</h1>
-    </div>
+    <main>
+      <NewGame />
+    </main>
   );
 }
 
