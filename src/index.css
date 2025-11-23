@@ -7,6 +7,9 @@
   /* Font family */
   --font-sans: "Outfit", sans-serif;
 
+  /* Border radius */
+  --radius-10: 10px;
+
   /* Colors */
   --color-dark-navy: hsl(202, 32%, 15%);
   --color-semi-dark-navy: hsl(199, 35%, 19%);
@@ -17,7 +20,10 @@
   --color-light-yellow-500: hsl(39, 88%, 58%);
   --color-light-yellow-100: hsl(39, 100%, 69%);
 
-  --shadow-start: inset 0px -8px 0px #10212a;
-  --shadow-y: inset 0px -8px 0px #cc8b13;
-  --shadow-b: inset 0px -8px 0px #118c87;
+  /* Box shadows */
+  --shadow-lg: inset 0px -8px 0px #10212a;
+  --shadow-sm: inset 0px -4px 0px #10212a;
+  --shadow-silver: inset 0px -4px 0px #6b8997;
+  --shadow-yellow: inset 0px -8px 0px #cc8b13;
+  --shadow-blue: inset 0px -8px 0px #118c87;
 }

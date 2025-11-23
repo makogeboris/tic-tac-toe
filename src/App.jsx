@@ -1,9 +1,11 @@
+import GameStart from "./components/GameStart";
 import NewGame from "./components/NewGame";
 
 function App() {
   return (
     <main>
-      <NewGame />
+      {/* <NewGame /> */}
+      <GameStart />
     </main>
   );
 }
