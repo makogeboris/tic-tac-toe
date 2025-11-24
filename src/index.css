@@ -8,7 +8,7 @@
   --font-sans: "Outfit", sans-serif;
 
   /* Border radius */
-  --radius-10: 10px;
+  --radius-10: 0.625rem;
 
   /* Colors */
   --color-dark-navy: hsl(202, 32%, 15%);
@@ -24,6 +24,7 @@
   --shadow-lg: inset 0px -8px 0px #10212a;
   --shadow-sm: inset 0px -4px 0px #10212a;
   --shadow-silver: inset 0px -4px 0px #6b8997;
+  --shadow-yellow-sm: inset 0px -4px 0px #cc8b13;
   --shadow-yellow: inset 0px -8px 0px #cc8b13;
   --shadow-blue: inset 0px -8px 0px #118c87;
 }

@@ -1,6 +1,6 @@
 import logo from "../assets/logo.svg";
 
-export default function NewGame() {
+function NewGame() {
   return (
     <div className="xs:gap-10 mx-auto my-0 flex max-w-[31.75rem] flex-col items-center justify-center gap-8 px-6">
       <img src={logo} alt="XO" />
@@ -90,3 +90,5 @@ export default function NewGame() {
     </div>
   );
 }
+
+export default NewGame;

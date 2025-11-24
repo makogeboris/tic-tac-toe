@@ -7,7 +7,7 @@ import xOutline from "../assets/icon-x-outline.svg";
 import oOutline from "../assets/icon-o-outline.svg";
 import restartIcon from "../assets/icon-restart.svg";
 
-export default function GameStart() {
+function GameStart({ openRestartModal }) {
   return (
     <div className="xs:my-36 mx-auto my-0 mt-6 mb-32 flex max-w-[31.75rem] flex-col px-6">
       <div className="flex items-center justify-between">
@@ -21,7 +21,10 @@ export default function GameStart() {
           </span>
         </div>
 
-        <button className="bg-silver focus:outline-light-blue-500 shadow-silver xs:size-[52px] xs:rounded-10 hover:bg-silver-light grid size-10 cursor-pointer place-content-center rounded-sm transition-all focus-within:outline focus-within:outline-offset-2">
+        <button
+          onClick={openRestartModal}
+          className="bg-silver focus:outline-light-blue-500 shadow-silver xs:size-[52px] xs:rounded-10 hover:bg-silver-light grid size-10 cursor-pointer place-content-center rounded-sm transition-all focus-visible:outline focus-visible:outline-offset-2"
+        >
           <img src={restartIcon} alt="" />
         </button>
       </div>
@@ -90,3 +93,5 @@ export default function GameStart() {
     </div>
   );
 }
+
+export default GameStart;
