@@ -1,13 +1,24 @@
+import { useState } from "react";
 import logo from "../assets/logo.svg";
 
-function NewGame() {
+function GameMenu({ onStartGame }) {
+  const [selectedSymbol, setSelectedSymbol] = useState("X");
+
+  function handleStartCPU() {
+    onStartGame("cpu", selectedSymbol);
+  }
+
+  function handleStartPlayer() {
+    onStartGame("player", selectedSymbol);
+  }
+
   return (
     <div className="xs:gap-10 mx-auto my-0 flex max-w-[31.75rem] flex-col items-center justify-center gap-8 px-6">
       <img src={logo} alt="XO" />
 
       <div className="bg-semi-dark-navy flex w-full flex-col items-center rounded-2xl px-6 pt-6 pb-7 text-center shadow-lg">
         <p className="text-silver text-base font-bold tracking-widest uppercase">
-          Pick player 1’s mark
+          Pick player 1's mark
         </p>
 
         <fieldset className="bg-dark-navy rounded-10 mt-6 flex w-full items-center justify-center p-2">
@@ -25,7 +36,8 @@ function NewGame() {
               type="radio"
               name="symbol"
               value="X"
-              defaultChecked
+              checked={selectedSymbol === "X"}
+              onChange={(e) => setSelectedSymbol(e.target.value)}
             />
             <svg
               width="32"
@@ -54,6 +66,8 @@ function NewGame() {
               type="radio"
               name="symbol"
               value="O"
+              checked={selectedSymbol === "O"}
+              onChange={(e) => setSelectedSymbol(e.target.value)}
             />
             <svg
               width="32"
@@ -79,11 +93,17 @@ function NewGame() {
       </div>
 
       <div className="xs:gap-5 flex w-full flex-col items-center gap-4">
-        <button className="bg-light-yellow-500 shadow-yellow xs:pt-4 xs:pb-6 text-dark-navy xs:text-xl xs:tracking-[0.078em] hover:bg-light-yellow-100 focus-visible:outline-light-yellow-500 w-full cursor-pointer rounded-2xl py-3.5 pb-5 text-base font-bold tracking-widest uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-2">
+        <button
+          onClick={handleStartCPU}
+          className="bg-light-yellow-500 shadow-yellow xs:pt-4 xs:pb-6 text-dark-navy xs:text-xl xs:tracking-[0.078em] hover:bg-light-yellow-100 focus-visible:outline-light-yellow-500 w-full cursor-pointer rounded-2xl py-3.5 pb-5 text-base font-bold tracking-widest uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           New game (vs cpu)
         </button>
 
-        <button className="bg-light-blue-500 shadow-blue xs:pt-4 xs:pb-6 text-dark-navy xs:text-xl xs:tracking-[0.078em] hover:bg-light-blue-200 focus-visible:outline-light-blue-500 w-full cursor-pointer rounded-2xl py-3.5 pb-5 text-base font-bold tracking-widest uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-2">
+        <button
+          onClick={handleStartPlayer}
+          className="bg-light-blue-500 shadow-blue xs:pt-4 xs:pb-6 text-dark-navy xs:text-xl xs:tracking-[0.078em] hover:bg-light-blue-200 focus-visible:outline-light-blue-500 w-full cursor-pointer rounded-2xl py-3.5 pb-5 text-base font-bold tracking-widest uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-2"
+        >
           New game (vs player)
         </button>
       </div>
@@ -91,4 +111,4 @@ function NewGame() {
   );
 }
 
-export default NewGame;
+export default GameMenu;

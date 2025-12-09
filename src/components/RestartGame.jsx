@@ -1,4 +1,9 @@
-function RestartGame({ closeRestartModal }) {
+function RestartGame({ closeRestartModal, onRestart }) {
+  function handleRestart() {
+    onRestart();
+    closeRestartModal();
+  }
+
   return (
     <>
       <div className="bg-semi-dark-navy fixed top-1/2 left-1/2 z-20 flex w-full -translate-x-1/2 -translate-y-1/2 flex-col items-center gap-6 py-16 sm:gap-8">
@@ -14,7 +19,7 @@ function RestartGame({ closeRestartModal }) {
             No, Cancel
           </button>
           <button
-            onClick={closeRestartModal}
+            onClick={handleRestart}
             className="text-dark-navy rounded-10 hover:bg-light-yellow-100 focus-visible:outline-light-blue-500 bg-light-yellow-500 shadow-yellow-sm cursor-pointer px-4 py-3.5 text-center text-base font-bold tracking-wider uppercase transition-all focus-visible:outline focus-visible:outline-offset-2"
           >
             Yes, Restart
