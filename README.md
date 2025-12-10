@@ -28,7 +28,7 @@ Users should be able to:
 
 ### Links
 
-- [Live Site](https://tic-tac-toe-two-beige-78.vercel.app/)
+- [Live Site](https://tic-tac-toe-lemon-ten-67.vercel.app/)
 
 ### Built with
 
