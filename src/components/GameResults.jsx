@@ -11,7 +11,11 @@ function GameResults({ result, gameMode, onQuit, onNextRound }) {
     message = "Round Tied";
     colorClass = "text-silver";
   } else if (type === "win") {
-    message = gameMode === "cpu" ? "You won!" : "Player 1 wins!";
+    if (gameMode === "cpu") {
+      message = "You won!";
+    } else {
+      message = winner === "X" ? "Player 1 wins!" : "Player 2 wins!";
+    }
     colorClass =
       winner === "X" ? "text-light-blue-500" : "text-light-yellow-500";
   } else if (type === "lose") {
@@ -52,6 +56,7 @@ function GameResults({ result, gameMode, onQuit, onNextRound }) {
           >
             Quit
           </button>
+
           <button
             onClick={onNextRound}
             className="text-dark-navy rounded-10 hover:bg-light-yellow-100 focus-visible:outline-light-blue-500 bg-light-yellow-500 shadow-yellow-sm cursor-pointer px-4 py-3.5 text-center text-base font-bold tracking-wider uppercase transition-all focus-visible:outline focus-visible:outline-offset-2"

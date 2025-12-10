@@ -301,11 +301,11 @@ function GameBoard({ openRestartModal, playerSymbol, gameMode, onGameEnd }) {
         <div className="bg-light-blue-500 xs:rounded-2xl xs:px-6 xs:py-3 xs:max-w-[8.75rem] rounded-10 flex w-full min-w-[6rem] flex-col items-center px-4 py-2">
           <span className="text-dark-navy xs:text-base xs:tracking-wider text-center text-xs font-normal tracking-wide uppercase">
             X{" "}
-            {playerSymbol === "X"
-              ? "(You)"
-              : gameMode === "cpu"
-                ? "(CPU)"
-                : "(P2)"}
+            {gameMode === "cpu"
+              ? playerSymbol === "X"
+                ? "(You)"
+                : "(CPU)"
+              : "(P1)"}
           </span>
           <span className="text-dark-navy xs:text-2xl text-center text-xl font-bold tracking-widest uppercase">
             {scores.X}
@@ -324,11 +324,11 @@ function GameBoard({ openRestartModal, playerSymbol, gameMode, onGameEnd }) {
         <div className="bg-light-yellow-500 xs:rounded-2xl xs:py-3 xs:px-6 xs:max-w-[8.75rem] rounded-10 flex w-full min-w-[6rem] flex-col items-center px-4 py-2">
           <span className="text-dark-navy xs:text-base xs:tracking-wider text-center text-xs font-normal tracking-wide uppercase">
             O{" "}
-            {playerSymbol === "O"
-              ? "(You)"
-              : gameMode === "cpu"
-                ? "(CPU)"
-                : "(P2)"}
+            {gameMode === "cpu"
+              ? playerSymbol === "O"
+                ? "(You)"
+                : "(CPU)"
+              : "(P2)"}
           </span>
           <span className="text-dark-navy xs:text-2xl text-center text-xl font-bold tracking-widest uppercase">
             {scores.O}
