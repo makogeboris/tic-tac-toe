@@ -7,7 +7,6 @@
   - [Screenshot](#screenshot)
   - [Links](#links)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 - [Author](#author)
 
 ## Overview
@@ -28,14 +27,12 @@ Users should be able to:
 
 ### Links
 
-- [Live Site](https://tic-tac-toe-lemon-ten-67.vercel.app/)
+- [Live Site](https://tic-tac-toe-game-three-lovat.vercel.app/)
 
 ### Built with
 
 - [React](https://reactjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-
-### What I learned
 
 ## Author
 
