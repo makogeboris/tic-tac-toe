@@ -16,9 +16,11 @@ function GameMenu({ onStartGame }) {
     <div className="xs:gap-10 mx-auto my-0 flex max-w-[31.75rem] flex-col items-center justify-center gap-8 px-6">
       <img src={logo} alt="XO" />
 
+      <h1 className="sr-only">Tic Tac Toe Game</h1>
+
       <div className="bg-semi-dark-navy flex w-full flex-col items-center rounded-2xl px-6 pt-6 pb-7 text-center shadow-lg">
         <p className="text-silver text-base font-bold tracking-widest uppercase">
-          Pick player 1's mark
+          Pick player 1&apos;s mark
         </p>
 
         <fieldset className="bg-dark-navy rounded-10 mt-6 flex w-full items-center justify-center p-2">
@@ -27,7 +29,6 @@ function GameMenu({ onStartGame }) {
           </legend>
 
           <label
-            htmlFor="symbol-x"
             className={`[&:has(:focus-visible)]:outline-light-blue-500 focus-within:bg-silver-light hover:bg-semi-dark-navy has-[:checked]:bg-silver-light focus-within:text-dark-navy has-[:checked]:text-dark-navy text-silver rounded-10 relative grid flex-1 cursor-pointer place-content-center px-12 py-2.5 transition-all [&:has(:focus-visible)]:outline [&:has(:focus-visible)]:outline-offset-2`}
           >
             <input
@@ -57,7 +58,6 @@ function GameMenu({ onStartGame }) {
           </label>
 
           <label
-            htmlFor="symbol-o"
             className={`[&:has(:focus-visible)]:outline-light-blue-500 focus-within:bg-silver-light hover:bg-semi-dark-navy has-[:checked]:bg-silver-light focus-within:text-dark-navy has-[:checked]:text-dark-navy text-silver rounded-10 relative grid flex-1 cursor-pointer place-content-center px-12 py-2.5 transition-all [&:has(:focus-visible)]:outline [&:has(:focus-visible)]:outline-offset-2`}
           >
             <input
@@ -92,8 +92,14 @@ function GameMenu({ onStartGame }) {
         </p>
       </div>
 
-      <div className="xs:gap-5 flex w-full flex-col items-center gap-4">
+      <section
+        aria-label="Start new game options"
+        className="xs:gap-5 flex w-full flex-col items-center gap-4"
+      >
         <button
+          aria-label="Start a new game against the computer"
+          aria-pressed="false"
+          type="button"
           onClick={handleStartCPU}
           className="bg-light-yellow-500 shadow-yellow xs:pt-4 xs:pb-6 text-dark-navy xs:text-xl xs:tracking-[0.078em] hover:bg-light-yellow-100 focus-visible:outline-light-yellow-500 w-full cursor-pointer rounded-2xl py-3.5 pb-5 text-base font-bold tracking-widest uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-2"
         >
@@ -101,12 +107,15 @@ function GameMenu({ onStartGame }) {
         </button>
 
         <button
+          aria-label="Start a new game against player"
+          aria-pressed="false"
+          type="button"
           onClick={handleStartPlayer}
           className="bg-light-blue-500 shadow-blue xs:pt-4 xs:pb-6 text-dark-navy xs:text-xl xs:tracking-[0.078em] hover:bg-light-blue-200 focus-visible:outline-light-blue-500 w-full cursor-pointer rounded-2xl py-3.5 pb-5 text-base font-bold tracking-widest uppercase transition-all focus-visible:outline-2 focus-visible:outline-offset-2"
         >
           New game (vs player)
         </button>
-      </div>
+      </section>
     </div>
   );
 }
